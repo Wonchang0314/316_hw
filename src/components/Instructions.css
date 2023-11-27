@@ -1,0 +1,9 @@
+.instruction-container {
+    background-color: #17a2b8; 
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+
+    margin: 0 auto;
+    width: 75%;
+    font-size: 18px;
+  }

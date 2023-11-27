@@ -1,0 +1,12 @@
+body {
+  background: url('../public/SUNYKorea_AcBldg.jpg');
+}
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+.title {
+  font-size: 32px; 
+  font-weight: bold;
+  color:antiquewhite;
+}

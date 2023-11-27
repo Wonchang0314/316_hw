@@ -1,0 +1,22 @@
+.login_container {
+    font-size: 18px;
+    background-color: rgb(58, 111, 165);
+    padding: 30px;
+    
+    margin: 0 auto;
+    border: 2px solid grey; 
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 75%;
+}
+.form{
+    margin-bottom: 30px;
+}
+.login-form-title {
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+

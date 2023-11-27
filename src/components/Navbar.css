@@ -1,0 +1,61 @@
+.listyle {
+    color: white;
+    display: inline-block;
+    padding-left: 18px;
+}
+
+.ulNav {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    background: hsl(0 0% 100% / 0.1);
+    backdrop-filter: blur(1rem);
+}
+
+@media (min-width: 40em) {
+    .☰, .X {
+        display: none;
+    }
+}
+
+@media (max-width: 40em) {
+    .navigation {
+        position: fixed;
+        inset: 0 0 0 30%;
+        flex-direction: column;
+        padding: min(30vh, 5rem) 1em;
+        z-index: 9998;
+        backdrop-filter: blur(1rem);
+    }
+    .navigation2{
+        display: none;
+    }
+ 
+    .ulNav {
+        text-align: left;
+        display: flex;       
+        flex-direction: column;  
+    }
+
+    .listyle {
+        color: white;
+        display: block;
+        padding-bottom: 60px;
+    }
+
+    .☰, .X {
+        display: block;
+        background-color: rgb(173, 186, 217);
+        background-repeat: no-repeat;
+        width: 2rem;
+        border: 0px;
+        border-radius: 6px;
+        aspect-ratio: 1;
+        position: absolute;
+        z-index: 9999;
+        top: 2rem;
+        right: 2rem;
+    }
+}

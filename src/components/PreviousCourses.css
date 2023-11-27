@@ -1,0 +1,18 @@
+.previous-courses-container {
+    background-color: rgb(58, 111, 165);
+    padding: 10px 10px;
+    margin-bottom: 20px;
+    margin: 10px auto; 
+
+    margin: 0 auto;
+    width: 75%;
+    font-size: 18px;
+}
+.course{
+    padding: 20px;
+}
+.courses-list{
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
