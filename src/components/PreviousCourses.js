@@ -13,8 +13,8 @@ const PreviousCourses = ({ studentId, takenCourses, setTakenCourses }) => {
       alert("Please login before proceeding!");
       showAlertRef.current = false;
     
-    } else {
-      showAlertRef.current = true;
+    } 
+    if (studentId !== "" && studentId !== "-1") {
       axios.get('http://localhost:3001/api/courseman/getCourses')
         .then(response => {
           const mappedCourses = response.data.map(course => ({

@@ -28,9 +28,9 @@ function Login({ setStudentId }) {
 
   return (
     <div class = "login_container">
-        <p className="login-form-title">Login Form</p>
-        <div class="form"><input type="text" placeholder="Student ID" value={studentIdInput} onChange={(e) => setStudentIdInput(e.target.value)} /></div>
-      <div class="form"><input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} /></div>
+        <p className="login_form_title">Login Form</p>
+        <div class="form"><label className="form_label">ID :</label> <input type="text" placeholder="Student ID" value={studentIdInput} onChange={(e) => setStudentIdInput(e.target.value)} /></div>
+      <div class="form"><label className="form_label">Password :</label><input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} /></div>
       <button onClick={handleLogin}>Login</button>
     </div>
   );

@@ -12,8 +12,17 @@
 }
 .form{
     margin-bottom: 30px;
+    display: flex;
 }
-.login-form-title {
+.form_label {
+    width: 20%;
+}
+.form input[type="text"],
+.form input[type="password"] {
+    margin-left: auto;
+    margin-right: auto;
+}
+.login_form_title {
     font-weight: bold;
     margin-bottom: 20px;
     font-size: 28px;
