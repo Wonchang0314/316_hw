@@ -68,6 +68,7 @@ const SelectCourses = ({ studentId, takenCourses }) => {
       <div className="search-form">
         <p className="search-form-title">Search Form</p>
       <div class ="form">
+        <label className='form_label'>Name :</label>
         <input
           type="text"
           placeholder="Enter your name"
@@ -75,6 +76,7 @@ const SelectCourses = ({ studentId, takenCourses }) => {
           onChange={(e) => setStudentName(e.target.value)}
         /></div>
         <div class ="form">
+          <label className='form_label'>Courses :</label>
         <input
           type="text"
           placeholder="Search for courses"
