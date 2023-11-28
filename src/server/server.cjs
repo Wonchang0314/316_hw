@@ -42,11 +42,10 @@ app.post('/api/courseman/login', (req, res) => {
       return res.status(404).send('Student not found');
     }
     
-
-    const student = results[0];
-    const hashCheck = crypto.SHA256(student.first_name + student.last_name + password).toString();
+    const student = results[0]; //ID
+    const hashCheck = crypto.SHA256(student.first_name + student.last_name + password).toString(); 
     console.log(`Computed hash: ${hashCheck}`);
-    console.log(`Stored hash: ${student.password}`);
+    console.log(`Stored hash: ${student.password}`); //Checking Password
 
     if (hashCheck === student.password) {
       console.log(`Student ${studentId} logged in successfully`);

@@ -1,29 +1,30 @@
 //Wonseok Chang, wonseok.chang@stonybrook.edu
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import './PreviousCourses.css';
 
 const PreviousCourses = ({ studentId, takenCourses, setTakenCourses }) => {
   const [courses, setCourses] = useState([]);
+  const showAlertRef = useRef(true);
   
 
   useEffect(() => {
-    if (studentId === "") {
+    if (studentId === "" && showAlertRef.current) {
       alert("Please login before proceeding!");
-      return;
-
-    }
-    else{
+      showAlertRef.current = false;
+    
+    } else {
+      showAlertRef.current = true;
       axios.get('http://localhost:3001/api/courseman/getCourses')
-      .then(response => {
-        const mappedCourses = response.data.map(course => ({
-          id: course.id,
-          courseNumber: course.course_id,
-          courseName: course.course_name
-        }));
-        setCourses(mappedCourses);
-      })
-      .catch(error => console.error('Error fetching courses:', error));
+        .then(response => {
+          const mappedCourses = response.data.map(course => ({
+            id: course.id,
+            courseNumber: course.course_id,
+            courseName: course.course_name
+          }));
+          setCourses(mappedCourses);
+        })
+        .catch(error => console.error('Error fetching courses:', error));
     }
   }, [studentId]);
 
